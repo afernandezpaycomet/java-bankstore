@@ -49,8 +49,8 @@ public class PAYTPV_BankStoreGatewayService {
     private String DS_MERCHANT_JETID;
     private String dS_ORIGINAL_IP;
 
-    private final String endpoint = "https://secure.paytpv.com/gateway/xml_bankstore.php?wsdl";
-    private final String endpointurl = "https://secure.paytpv.com/gateway/bnkgateway.php?";
+    private final String endpoint = "https://secure.paytpv.com/gateway/xml-bankstore?wsdl";
+    private final String endpointurl = "https://secure.paytpv.com/gateway/ifr-bankstore?";
 
     public PAYTPV_BankStoreGatewayService(String MERCHANT_MERCHANTCODE, String MERCHANT_TERMINAL, String Password, String MERCHANT_JETID, String IPAddr) {
         this.dS_MERCHANT_MERCHANTCODE = MERCHANT_MERCHANTCODE;
