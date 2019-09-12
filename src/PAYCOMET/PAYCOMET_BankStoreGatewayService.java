@@ -82,7 +82,7 @@ public class PAYCOMET_BankStoreGatewayService {
     {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + transreference + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + transreference + this.password);
         SoapObject soapReq = new SoapObject("create_preauthorization");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
         soapReq.addProperty("DS_MERCHANT_TERMINAL", dS_MERCHANT_TERMINAL);
@@ -111,7 +111,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse preauthorization_confirm(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
         SoapObject soapReq = new SoapObject("preauthorization_confirm");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
         soapReq.addProperty("DS_MERCHANT_TERMINAL", dS_MERCHANT_TERMINAL);
@@ -136,7 +136,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse preauthorization_cancel(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
 
         SoapObject soapReq = new SoapObject("preauthorization_cancel");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -162,7 +162,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse deferred_preauthorization_confirm(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
 
         SoapObject soapReq = new SoapObject("deferred_preauthorization_confirm");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -186,7 +186,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @return 
      */
     public ServiceResponse deferred_preauthorization_cancel(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER) {
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_AMOUNT + this.password);
         ServiceResponse result = new ServiceResponse();
         SoapObject soapReq = new SoapObject("deferred_preauthorization_cancel");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -213,7 +213,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse execute_purchase_rtoken(String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER, String dS_MERCHANT_IDENTIFIER, String DS_MERCHANT_CURRENCY, String dS_MERCHANT_PRODUCTDESCRIPTION) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + dS_MERCHANT_ORDER + dS_MERCHANT_IDENTIFIER + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + dS_MERCHANT_ORDER + dS_MERCHANT_IDENTIFIER + this.password);
         SoapObject soapReq = new SoapObject("execute_purchase_rtoken");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
         soapReq.addProperty("DS_MERCHANT_TERMINAL", dS_MERCHANT_TERMINAL);
@@ -239,7 +239,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse add_user(String dS_MERCHANT_PAN, String dS_MERCHANT_EXPIRYDATE, String dS_MERCHANT_CVV2, String dS_MERCHANT_CARDHOLDERNAME) throws Exception {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_MERCHANT_PAN + dS_MERCHANT_CVV2 + this.dS_MERCHANT_TERMINAL + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_MERCHANT_PAN + dS_MERCHANT_CVV2 + this.dS_MERCHANT_TERMINAL + this.password);
         SoapObject soapReq = new SoapObject("add_user");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
         soapReq.addProperty("DS_MERCHANT_TERMINAL", dS_MERCHANT_TERMINAL);
@@ -262,7 +262,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse add_user_token(String dS_MERCHANT_JETTOKEN) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_MERCHANT_JETTOKEN + DS_MERCHANT_JETID + this.dS_MERCHANT_TERMINAL + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_MERCHANT_JETTOKEN + DS_MERCHANT_JETID + this.dS_MERCHANT_TERMINAL + this.password);
         SoapObject soapReq = new SoapObject("add_user_token");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
         soapReq.addProperty("DS_MERCHANT_TERMINAL", dS_MERCHANT_TERMINAL);
@@ -283,7 +283,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse info_user(String dS_IDUSER, String dS_TOKEN_USER) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + this.password);
 
         SoapObject soapReq = new SoapObject("info_user");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -305,7 +305,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse remove_user(String dS_IDUSER, String dS_TOKEN_USER) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + this.password);
         SoapObject soapReq = new SoapObject("remove_user");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
         soapReq.addProperty("DS_MERCHANT_TERMINAL", dS_MERCHANT_TERMINAL);
@@ -332,7 +332,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse execute_purchase(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER, String DS_MERCHANT_CURRENCY, String dS_MERCHANT_PRODUCTDESCRIPTION, String dS_MERCHANT_OWNER, String dS_MERCHANT_SCORING) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + dS_MERCHANT_ORDER + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + dS_MERCHANT_ORDER + this.password);
 
         SoapObject soapReq = new SoapObject("execute_purchase");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -364,7 +364,7 @@ public class PAYCOMET_BankStoreGatewayService {
      */
     public ServiceResponse execute_purchase_dcc(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER, String DS_MERCHANT_CURRENCY, String dS_MERCHANT_PRODUCTDESCRIPTION, String dS_MERCHANT_OWNER) {
 
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + dS_MERCHANT_ORDER + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AMOUNT + dS_MERCHANT_ORDER + this.password);
 
         ServiceResponse result = new ServiceResponse();
         SoapObject soapReq = new SoapObject("execute_purchase_dcc");
@@ -392,7 +392,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse confirm_purchase_dcc(String dS_MERCHANT_ORDER, String dS_MERCHANT_DCC_CURRENCY, String dS_MERCHANT_DCC_SESSION) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_DCC_CURRENCY + dS_MERCHANT_DCC_SESSION);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_ORDER + dS_MERCHANT_DCC_CURRENCY + dS_MERCHANT_DCC_SESSION);
 
         SoapObject soapReq = new SoapObject("confirm_purchase_dcc");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -418,7 +418,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse execute_refund(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_ORDER, String DS_MERCHANT_CURRENCY, String dS_MERCHANT_AUTHCODE, String dS_MERCHANT_AMOUNT) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AUTHCODE + dS_MERCHANT_ORDER + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + dS_MERCHANT_AUTHCODE + dS_MERCHANT_ORDER + this.password);
 
         SoapObject soapReq = new SoapObject("execute_refund");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -455,7 +455,7 @@ public class PAYCOMET_BankStoreGatewayService {
             String dS_SUBSCRIPTION_PERIODICITY, String DS_SUBSCRIPTION_AMOUNT, String DS_SUBSCRIPTION_CURRENCY, String dS_EXECUTE, String dS_MERCHANT_CARDHOLDERNAME, String dS_MERCHANT_SCORING) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_MERCHANT_PAN + dS_MERCHANT_CVV2 + this.dS_MERCHANT_TERMINAL + DS_SUBSCRIPTION_AMOUNT + DS_SUBSCRIPTION_CURRENCY + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_MERCHANT_PAN + dS_MERCHANT_CVV2 + this.dS_MERCHANT_TERMINAL + DS_SUBSCRIPTION_AMOUNT + DS_SUBSCRIPTION_CURRENCY + this.password);
 
         SoapObject soapReq = new SoapObject("create_subscription");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -492,7 +492,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse edit_subscription(String dS_IDUSER, String dS_TOKEN_USER, String dS_SUBSCRIPTION_STARTDATE, String dS_SUBSCRIPTION_ENDDATE, String dS_SUBSCRIPTION_PERIODICITY, String DS_SUBSCRIPTION_AMOUNT, String dS_EXECUTE) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + DS_SUBSCRIPTION_AMOUNT + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + DS_SUBSCRIPTION_AMOUNT + this.password);
 
         SoapObject soapReq = new SoapObject("edit_subscription");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -517,7 +517,7 @@ public class PAYCOMET_BankStoreGatewayService {
     public ServiceResponse remove_subscription(String dS_IDUSER, String dS_TOKEN_USER) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + this.password);
 
         SoapObject soapReq = new SoapObject("remove_subscription");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
@@ -547,7 +547,7 @@ public class PAYCOMET_BankStoreGatewayService {
             String DS_SUBSCRIPTION_ORDER, String dS_SUBSCRIPTION_PERIODICITY, String DS_SUBSCRIPTION_AMOUNT, String DS_SUBSCRIPTION_CURRENCY, String dS_MERCHANT_SCORING) {
 
         ServiceResponse result = new ServiceResponse();
-        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA1hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + DS_SUBSCRIPTION_AMOUNT + DS_SUBSCRIPTION_CURRENCY + this.password);
+        dS_MERCHANT_MERCHANTSIGNATURE = makeSHA512hash(this.dS_MERCHANT_MERCHANTCODE + dS_IDUSER + dS_TOKEN_USER + this.dS_MERCHANT_TERMINAL + DS_SUBSCRIPTION_AMOUNT + DS_SUBSCRIPTION_CURRENCY + this.password);
 
         SoapObject soapReq = new SoapObject("create_subscription_token");
         soapReq.addProperty("DS_MERCHANT_MERCHANTCODE", dS_MERCHANT_MERCHANTCODE);
