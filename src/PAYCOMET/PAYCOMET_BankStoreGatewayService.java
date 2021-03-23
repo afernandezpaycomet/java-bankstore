@@ -67,14 +67,14 @@ public class PAYCOMET_BankStoreGatewayService {
         
     /**
 	* Create a pre-authorization by web service
-	* @param dS_IDUSER User ID in PayCOMET User ID in PayCOMET
-	* @param dS_TOKEN_USER user Token in PayCOMET user Token in PayCOMET
-	* @param dS_MERCHANT_AMOUNT Amount of payment 1 € = 100 Amount of payment 1 € = 100
-	* @param transreference  unique identifier payment unique identifier payment
-	* @param DS_MERCHANT_CURRENCY identifier transaction currency identifier transaction currency
-	* @param dS_MERCHANT_PRODUCTDESCRIPTION Product Description Description Product Description
-	* @param dS_MERCHANT_OWNER Cardholder Cardholder
-	* @param dS_MERCHANT_SCORING scoring (optional) value of risk scoring the transaction scoring (optional) value of risk scoring the transaction (optional) value of risk scoring the transaction
+	* @param dS_IDUSER User ID in PayCOMET 
+	* @param dS_TOKEN_USER user Token in PayCOMET 
+	* @param dS_MERCHANT_AMOUNT Amount of payment 1 € = 100 
+	* @param transreference  unique identifier payment 
+	* @param DS_MERCHANT_CURRENCY identifier transaction currency 
+	* @param dS_MERCHANT_PRODUCTDESCRIPTION Product Description 
+	* @param dS_MERCHANT_OWNER Cardholder 
+	* @param dS_MERCHANT_SCORING scoring (optional) value of risk scoring the transaction 
 	* @return Object A transaction response
 	* @version 2.0 06/02/2016
 	*/    
@@ -206,8 +206,8 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param dS_MERCHANT_AMOUNT Amount of payment 1 € = 100
      * @param dS_MERCHANT_ORDER unique identifier payment
      * @param dS_MERCHANT_IDENTIFIER Original reference card stored in the old system
-     * @param DS_MERCHANT_CURRENCY identifier transaction currency identifier transaction currency
-     * @param dS_MERCHANT_PRODUCTDESCRIPTION Product Description Product Description
+     * @param DS_MERCHANT_CURRENCY identifier transaction currency 
+     * @param dS_MERCHANT_PRODUCTDESCRIPTION Product Description
      * @return 
      */
     public ServiceResponse execute_purchase_rtoken(String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER, String dS_MERCHANT_IDENTIFIER, String DS_MERCHANT_CURRENCY, String dS_MERCHANT_PRODUCTDESCRIPTION) {
@@ -229,10 +229,10 @@ public class PAYCOMET_BankStoreGatewayService {
 
     /**
      * 
-     * @param dS_MERCHANT_PAN card number without spaces or dashes bread card number without spaces or dashes
-     * @param dS_MERCHANT_EXPIRYDATE expiry date of the card, expressed as "MMYY" (two - digit month and year in two digits) expiry date of the card, expressed as "MMYY" (two - digit month and year in two digits)
-     * @param dS_MERCHANT_CVV2 Card code Card code
-     * @param dS_MERCHANT_CARDHOLDERNAME Cardholder Card holder name
+     * @param dS_MERCHANT_PAN card number without spaces or dashes
+     * @param dS_MERCHANT_EXPIRYDATE expiry date of the card, expressed as "MMYY" (two - digit month and year in two digits) 
+     * @param dS_MERCHANT_CVV2 Card code 
+     * @param dS_MERCHANT_CARDHOLDERNAME Card holder name
      * @return
      * @throws Exception 
      */
@@ -324,9 +324,9 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param dS_MERCHANT_AMOUNT Amount of payment 1 € = 100
      * @param dS_MERCHANT_ORDER unique identifier payment
      * @param DS_MERCHANT_CURRENCY identifier transaction currency 
-     * @param dS_MERCHANT_PRODUCTDESCRIPTION Product Description Product Description
+     * @param dS_MERCHANT_PRODUCTDESCRIPTION Product Description
      * @param dS_MERCHANT_OWNER Cardholder
-     * @param dS_MERCHANT_SCORING scoring (optional) value of risk scoring the transaction scoring (optional) value of risk scoring the transaction
+     * @param dS_MERCHANT_SCORING scoring (optional) value of risk scoring the transaction 
      * @return 
      */
     public ServiceResponse execute_purchase(String dS_IDUSER, String dS_TOKEN_USER, String dS_MERCHANT_AMOUNT, String dS_MERCHANT_ORDER, String DS_MERCHANT_CURRENCY, String dS_MERCHANT_PRODUCTDESCRIPTION, String dS_MERCHANT_OWNER, String dS_MERCHANT_SCORING) {
@@ -540,7 +540,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param dS_SUBSCRIPTION_PERIODICITY Frequency of subscription. In days.
      * @param DS_SUBSCRIPTION_AMOUNT Amount of payment 1 € = 100
      * @param DS_SUBSCRIPTION_CURRENCY identifier transaction currency
-     * @param dS_MERCHANT_SCORING scoring (optional) value of risk scoring the transaction scoring (optional) value of risk scoring the transaction
+     * @param dS_MERCHANT_SCORING scoring (optional) value of risk scoring the transaction 
      * @return 
      */
     public ServiceResponse create_subscription_token(String dS_IDUSER, String dS_TOKEN_USER, String dS_SUBSCRIPTION_STARTDATE, String dS_SUBSCRIPTION_ENDDATE,
@@ -568,9 +568,9 @@ public class PAYCOMET_BankStoreGatewayService {
     /**
      * 
      * @param transreference  unique identifier payment 
-     * @param amount Amount of payment 1 € = 100 Amount of payment 1 € = 100
-     * @param currency identifier transaction currency identifier transaction currency
-     * @param lang language language language
+     * @param amount Amount of payment 1 € = 100 
+     * @param currency identifier transaction currency 
+     * @param lang language 
      * @param description description description
      * @param secure3d  secure3d secure3d
      * @return 
@@ -664,7 +664,7 @@ public class PAYCOMET_BankStoreGatewayService {
     /**
      * 
      * @param transreference  unique identifier payment
-     * @param lang language language
+     * @param lang language 
      * @return 
      */
     public ServiceResponse AddUserUrl(String transreference, String lang) {
@@ -702,7 +702,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param startDate date subscription start yyyy-mm-dd
      * @param endDate Date End subscription yyyy-mm-dd
      * @param periodicity Frequency of subscription. In days.
-     * @param lang language language
+     * @param lang language 
      * @param description description
      * @param secure3d  secure3d
      * @return 
@@ -755,7 +755,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param periodicity Frequency of subscription. In days.
      * @param iduser unique identifier system registered user.
      * @param tokenuser token code associated to IDUSER.
-     * @param lang language language
+     * @param lang language 
      * @param secure3d  secure3d
      * @return 
      */
@@ -804,7 +804,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param transreference  unique identifier payment
      * @param amount Amount of payment 1 € = 100
      * @param currency identifier transaction currency
-     * @param lang language language
+     * @param lang language 
      * @param description description
      * @param secure3d  secure3d
      * @return 
@@ -852,7 +852,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param currency identifier transaction currency
      * @param iduser unique identifier system registered user.
      * @param tokenuser token code associated to IDUSER.
-     * @param lang language language language
+     * @param lang language  
      * @param description description description
      * @param secure3d  secure3d secure3d
      * @return 
@@ -902,7 +902,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param currency identifier transaction currency
      * @param iduser unique identifier system registered user.
      * @param tokenuser token code associated to IDUSER.
-     * @param lang language language
+     * @param lang language 
      * @param description description
      * @param secure3d  secure3d
      * @return 
@@ -956,7 +956,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param currency identifier transaction currency
      * @param iduser unique identifier system registered user.
      * @param tokenuser token code associated to IDUSER.
-     * @param lang language language
+     * @param lang language 
      * @param description description
      * @param secure3d  secure3d
      * @return 
@@ -1060,7 +1060,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param currency identifier transaction currency
      * @param iduser unique identifier system registered user.
      * @param tokenuser token code associated to IDUSER.
-     * @param lang language language
+     * @param lang language 
      * @param description description
      * @param secure3d  secure3d
      * @return 
@@ -1113,7 +1113,7 @@ public class PAYCOMET_BankStoreGatewayService {
      * @param currency identifier transaction currency
      * @param iduser unique identifier system registered user.
      * @param tokenuser token code associated to IDUSER.
-     * @param lang language language
+     * @param lang language 
      * @param description description
      * @param secure3d  secure3d
      * @return 
@@ -1295,51 +1295,63 @@ public class PAYCOMET_BankStoreGatewayService {
             data.put("MERCHANT_PRODUCTDESCRIPTION", operationdata.getConcept());
         }
 
-        if ((int) operationtype == 1) { // Authorization (execute_purchase)
-            data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
-            data.put("MERCHANT_SCORING", operationdata.getScoring());
-        } else if ((int) operationtype == 3) { // Preauthorization
-            data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
-            data.put("MERCHANT_SCORING", operationdata.getScoring());
-        } else if ((int) operationtype == 6) { // Confirmaciï¿½n de Preauthorization
-            data.put("IDUSER", operationdata.getIdUser());
-            data.put("TOKEN_USER", operationdata.getTokenUser());
-        } else if ((int) operationtype == 4) { // Cancelaciï¿½n de Preauthorization
-            data.put("IDUSER", operationdata.getIdUser());
-            data.put("TOKEN_USER", operationdata.getTokenUser());
-        } else if ((int) operationtype == 9) { // Subscription
-            data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
-            data.put("SUBSCRIPTION_STARTDATE", operationdata.getStartDate());
-            data.put("SUBSCRIPTION_ENDDATE", operationdata.getEndDate());
-            data.put("SUBSCRIPTION_PERIODICITY", operationdata.getPeriodicity());
-            data.put("MERCHANT_SCORING", operationdata.getScoring());
-        } else if ((int) operationtype == 109) { // execute_purchase_token
-            data.put("IDUSER", operationdata.getIdUser());
-            data.put("TOKEN_USER", operationdata.getTokenUser());
-            data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
-            data.put("MERCHANT_SCORING", operationdata.getScoring());
-        } else if ((int) operationtype == 110) { // create_subscription_token
-            data.put("IDUSER", operationdata.getIdUser());
-            data.put("TOKEN_USER", operationdata.getTokenUser());
-            data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
-            data.put("SUBSCRIPTION_STARTDATE", operationdata.getStartDate());
-            data.put("SUBSCRIPTION_ENDDATE", operationdata.getEndDate());
-            data.put("SUBSCRIPTION_PERIODICITY", operationdata.getPeriodicity());
-            data.put("MERCHANT_SCORING", operationdata.getScoring());
-        } else if ((int) operationtype == 111) { // create_preauthorization_token
-            data.put("IDUSER", operationdata.getIdUser());
-            data.put("TOKEN_USER", operationdata.getTokenUser());
-            data.put("MERCHANT_SCORING", operationdata.getScoring());
-            data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
-        } else if ((int) operationtype == 13) { // Deferred Preauthorization
-            data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
-            data.put("MERCHANT_SCORING", operationdata.getScoring());
-        } else if ((int) operationtype == 16) { // Deferred Confirmaciï¿½n de Preauthorization
-            data.put("IDUSER", operationdata.getIdUser());
-            data.put("TOKEN_USER", operationdata.getTokenUser());
-        } else if ((int) operationtype == 14) { // Deferred  Cancelaciï¿½n de Preauthorization
-            data.put("IDUSER", operationdata.getIdUser());
-            data.put("TOKEN_USER", operationdata.getTokenUser());
+        switch ((int)operationtype) {
+            case 1://Authorization
+                data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
+                data.put("MERCHANT_SCORING", operationdata.getScoring());
+                break;
+            case 3://Preauthorization
+                data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
+                data.put("MERCHANT_SCORING", operationdata.getScoring());
+                break; 
+            case 6://confirmacion de Preauthorization
+                data.put("IDUSER", operationdata.getIdUser());
+                data.put("TOKEN_USER", operationdata.getTokenUser());
+                break;
+            case 4://cancelacion de Preauthorization
+                data.put("IDUSER", operationdata.getIdUser());
+                data.put("TOKEN_USER", operationdata.getTokenUser());
+                break;
+            case 9://subscription
+                data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
+                data.put("SUBSCRIPTION_STARTDATE", operationdata.getStartDate());
+                data.put("SUBSCRIPTION_ENDDATE", operationdata.getEndDate());
+                data.put("SUBSCRIPTION_PERIODICITY", operationdata.getPeriodicity());
+                data.put("MERCHANT_SCORING", operationdata.getScoring());
+                break;
+            case 109://execute_purchase_token
+                data.put("IDUSER", operationdata.getIdUser());
+                data.put("TOKEN_USER", operationdata.getTokenUser());
+                data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
+                data.put("MERCHANT_SCORING", operationdata.getScoring());
+                break;
+            case 110://createcreate_subscription_token
+                data.put("IDUSER", operationdata.getIdUser());
+                data.put("TOKEN_USER", operationdata.getTokenUser());
+                data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
+                data.put("SUBSCRIPTION_STARTDATE", operationdata.getStartDate());
+                data.put("SUBSCRIPTION_ENDDATE", operationdata.getEndDate());
+                data.put("SUBSCRIPTION_PERIODICITY", operationdata.getPeriodicity());
+                data.put("MERCHANT_SCORING", operationdata.getScoring());
+                break;
+            case 111://create_preauthorization_token
+                data.put("IDUSER", operationdata.getIdUser());
+                data.put("TOKEN_USER", operationdata.getTokenUser());
+                data.put("MERCHANT_SCORING", operationdata.getScoring());
+                data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
+                break;
+            case 13://Deferred Preauthorization
+                data.put("MERCHANT_CURRENCY", operationdata.getCurrency());
+                data.put("MERCHANT_SCORING", operationdata.getScoring());
+                break;
+            case 16://Deferred confirmacion de Preauthorization
+                data.put("IDUSER", operationdata.getIdUser());
+                data.put("TOKEN_USER", operationdata.getTokenUser());
+                break;
+            case 14://Deferred cancelacion de Preauthorization
+                data.put("IDUSER", operationdata.getIdUser());
+                data.put("TOKEN_USER", operationdata.getTokenUser());    
+                break;
         }
 
         String content = "";
