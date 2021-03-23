@@ -8,6 +8,48 @@ Este es el API de conexión con todos los servicios de PAYCOMET BankStore median
 2. Inserta la librería en tu proyecto de JAVA.
 3. Utiliza las funciones contenidas en la librería para realizar las llamadas.
 
+## Parámetros para el uso de métodos
+
+DS_IDUSER : User ID in PayCOMET.
+
+MERCHAND_JETID : jetID of product in PAYCOMET
+
+DS_TOKEN_USER : User Token in PayCOMET.
+
+DS_MERCHANT_AMOUNT/MERCHANT_AMOUNT : Amount of payment 1 € = 100.
+
+DS_MERCHANT_ORDER/MERCHANT_ORDER: unique identifier payment.
+
+DS_MERCHANT_CURRENCY/MERCHANT_CURRENCY: identifier transaction currency.
+
+DS_MERCHANT_PRODUCTDESCRIPTION/MERCHANT_PRODUCTDESCRIPTION: Product Description.
+
+DS_MERCHANT_OWNER/MERCHANT_OWNER: Cardholder.
+
+DS_MERCHANT_SCORING/MERCHANT_SCORING: scoring (optional) value of risk scoring the transaction.
+
+DS_MERCHANT_IDENTIFIER/MERCHANT_IDENTIFIER: Original reference card stored in the old system.
+
+DS_MERCHANT_JETTOKEN/MERCHANT_JETTOKEN temporary user Token in PayCOMET.
+
+
+DS_SUBSCRIPTION_AMOUNT/SUBSCRIPTION_AMOUNT: Amount of payment 1 € = 100.
+
+DS_SUBSCRIPTION_PERIODICITY/SUBSCRIPTION_PERIODICITY: Frequency of subscription. In days.
+
+DS_SUBSCRIPTION_ORDER/SUBSCRIPTION_ORDER unique identifier payment.
+
+DS_SUBSCRIPTION_STARTDATE/SUBSCRIPTION_STARTDATE: date subscription start yyyy-mm-dd .
+
+DS_SUBSCRIPTION_ENDDATE/SUBSCRIPTION_ENDDATE: Date End subscription yyyy-mm-dd.
+
+DS_MERCHANT_CVV2/MERCHANT_CVV2: Card code.
+
+DS_MERCHANT_EXPIRYDATE/MERCHANT_EXPIRYDATE: expiry date of the card, expressed as "MMYY" (two - digit month and year in two digits).
+
+DS_MERCHANT_PAN/MERCHANT_PAN:card number without spaces or dashes bread.
+
+DS_MERCHANT_CARDHOLDERNAME/MERCHANT_CARDHOLDERNAME:Card holder name.
 
 ## Ejemplos de código
 
